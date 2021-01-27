@@ -44,11 +44,53 @@ export default function MainContentGrid() {
 			],
 		},
 	};
+	const tableContentTwo = {
+		'cardHeader' : {
+			'title': "Customer Services",
+			'buttonName': "Show All",
+		},
+		'tableInfo' : {
+			theadTitle: ["Customer Name", "Project", "Status"],
+			tbodyContent: [
+				{
+					projectTitle: "Balloon Entertainment",
+					department: "UI Design",
+					status: "review",
+					statusClass: "status review",
+				},
+				{
+					projectTitle: "GrandRaise",
+					department: "Fullstack Support",
+					status: "in progress",
+					statusClass: "status progress",
+				},
+				{
+					projectTitle: "Cronne App",
+					department: "Mobile Team",
+					status: "pending",
+					statusClass: "status pending",
+				},
+				{
+					projectTitle: "Atelle App",
+					department: "UX Design",
+					status: "review",
+					statusClass: "status review",
+				},
+				{
+					projectTitle: "SnugLuxe Shopping ",
+					department: "DevOps",
+					status: "pending",
+					statusClass: "status pending",
+				},
+			],
+		},
+	};
 
 	return (
 		<div className="recent-grid">
 			<MainContentGridProjects projectCard={tableContentOne} />
 			<MainContentGridCustomers />
+			<MainContentGridProjects projectCard={tableContentTwo} />
 		</div>
 	);
 }
